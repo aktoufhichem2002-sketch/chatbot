@@ -1,0 +1,14 @@
+[
+    {
+        "question": "comment creer une variable dans twincat",
+        "reponse": "Dans PLC > Main, ajoute ta variable dans le bloc VAR."
+    },
+    {
+        "question": "c'est quoi un ton",
+        "reponse": "Un TON est un temporisateur à l’enclenchement."
+    },
+    {
+        "question": "comment faire une boucle for en python",
+        "reponse": "Utilise: for(i=0; i<10; i++){ ... }"
+    }
+]

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot Web - Hichem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Chatbot Web</h2>
+
+        <div class="robot" aria-hidden="true">🤖</div>
+
+        <div id="chatbox"></div>
+
+        <div class="input-zone">
+            <input type="text" id="userInput" placeholder="Pose une question..." />
+            <button onclick="sendMessage()">Envoyer</button>
+        </div>
+    </div>
+
+    <footer class="footer">Hichem Aktouf</footer>
+
+    <script>
+        let connaissances = [];
+
+        async function chargerConnaissances() {
+            const data = await fetch("base_connaissances.json");
+            connaissances = await data.json();
+        }
+
+        function ajouterMessage(auteur, message) {
+            let chatbox = document.getElementById("chatbox");
+            chatbox.innerHTML += `<div class='msg ${auteur}'>${message}</div>`;
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        function trouverReponse(question) {
+            question = question.toLowerCase();
+
+            for (let item of connaissances) {
+                if (question.includes(item.question.toLowerCase().slice(0, 6))) {
+                    return item.reponse;
+                }
+            }
+            return "Je ne connais pas encore cette question. Ajoute-la dans base_connaissances.json !";
+        }
+
+        function sendMessage() {
+            let input = document.getElementById("userInput");
+            let question = input.value.trim();
+            if (question === "") return;
+
+            ajouterMessage("user", question);
+            input.value = "";
+
+            let reponse = trouverReponse(question);
+            setTimeout(() => {
+                ajouterMessage("bot", reponse);
+            }, 300);
+        }
+
+        // Charger les données au démarrage
+        chargerConnaissances();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #f6f6ff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+    background: linear-gradient(120deg, #6a3ea6, #8f63d7, #b88be6);
+    background-size: 600% 600%;
+    animation: mauveShift 12s ease infinite;
+}
+
+.container {
+    width: 460px;
+    background: rgba(20,16,28,0.55);
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(16,12,30,0.6);
+    backdrop-filter: blur(6px);
+    transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.container:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(16,12,30,0.75); }
+
+#chatbox {
+    height: 360px;
+    overflow-y: auto;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.08));
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.03);
+}
+
+.msg {
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    max-width: 86%;
+    animation: popIn 260ms ease both;
+}
+
+.user {
+    background: linear-gradient(90deg,#4ea1ff,#2d7ef0);
+    text-align: right;
+    margin-left: auto;
+}
+
+.bot {
+    background: linear-gradient(90deg,#545454,#3a3a3a);
+    text-align: left;
+    margin-right: auto;
+}
+
+.input-zone {
+    display: flex;
+    margin-top: 12px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255,255,255,0.03);
+    color: inherit;
+    transition: box-shadow 160ms ease;
+}
+
+input:focus { box-shadow: 0 6px 18px rgba(79,46,158,0.18); }
+
+button {
+    margin-left: 10px;
+    padding: 11px 16px;
+    background: linear-gradient(180deg,#7b52d9,#5b31b7);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+button:active { transform: translateY(2px); }
+
+/* Robot logo styles */
+.robot {
+    font-size: 96px;
+    width: 100%;
+    text-align: center;
+    margin: 6px 0 12px 0;
+    filter: drop-shadow(0 10px 18px rgba(101,41,146,0.45));
+    animation: floaty 3.6s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+/* Footer with name */
+.footer {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 12px;
+    color: rgba(246,246,255,0.9);
+    font-size: 14px;
+    opacity: 0.95;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.12), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Animations */
+@keyframes mauveShift {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@keyframes floaty {
+    0%{ transform: translateY(0) rotate(-2deg); }
+    50%{ transform: translateY(-10px) rotate(2deg); }
+    100%{ transform: translateY(0) rotate(-2deg); }
+}
+
+@keyframes popIn {
+    0% { opacity: 0; transform: translateY(6px) scale(0.995); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* small screens */
+@media (max-width: 520px) {
+    .container { width: calc(100% - 28px); margin: 0 14px; }
+    .robot { font-size: 72px; }
+}
