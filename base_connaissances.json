@@ -1,7 +1,7 @@
 [
     {
-        "question": "comment creer une variable dans twincat",
-        "reponse": "Dans PLC > Main, ajoute ta variable dans le bloc VAR."
+        "question": "wesmek",
+        "reponse": "ana Lina L9AHBA"
     },
     {
         "question": "c'est quoi un ton",
@@ -12,3 +12,4 @@
         "reponse": "Utilise: for(i=0; i<10; i++){ ... }"
     }
 ]
+
