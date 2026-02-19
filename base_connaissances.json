@@ -1,45 +1,37 @@
 [
-    {
-      "topic": "TE2000 - Site de démonstration",
-      "question": "Quel est le site de démonstration utile pour voir toutes les possibilités de TE2000 ?",
-      "reponse": "Le site de démonstration officiel est https://cmi.beckhoff-cloud.com. Il montre des exemples complets d'interfaces développées avec TwinCAT HMI TE2000."
-    },
-    {
-      "topic": "Interface - Réinitialisation de l'affichage",
-      "question": "Comment réinitialiser l'affichage de TwinCAT HMI si j'ai modifié ou supprimé une fenêtre par erreur ?",
-      "reponse": "Pour réinitialiser l'affichage : aller dans le menu supérieur, cliquer sur « Window », puis sélectionner « Reset Window Layout »."
-    },
-    {
-      "topic": "Bonnes pratiques - Nommage des objets",
-      "question": "Quelle règle suivre pour nommer les objets dans TwinCAT HMI ?",
-      "reponse": "Chaque objet ajouté doit être nommé selon une règle définie dans un fichier Excel stocké sur le serveur de l'entreprise. Il faut toujours s'y référer avant de nommer un objet."
-    },
-    {
-      "topic": "Design - Éviter les déplacements accidentels",
-      "question": "Comment empêcher de déplacer un objet HMI par erreur ?",
-      "reponse": "Dans le Document Outline, il est possible de verrouiller un objet grâce à l'icône de cadenas. Cela empêche tout déplacement involontaire."
-    },
-    {
-      "topic": "Interface - Document Outline",
-      "question": "Comment ouvrir le Document Outline dans TwinCAT HMI ?",
-      "reponse": "Pour ouvrir le Document Outline, cliquer sur la toute première icône située au-dessus de l’icône 'C' (Configuration), à l’endroit où se trouve aussi l’icône 'L' du Live View."
-    },
-    {
-      "topic": "Variables internes - SolidColor",
-      "question": "À quoi sert une variable interne de type SolidColor ?",
-      "reponse": "Une variable interne de type SolidColor permet de définir une couleur réutilisable afin que plusieurs objets partagent la même référence de couleur."
-    },
-    {
-      "topic": "Variables système",
-      "question": "Comment afficher toutes les variables système dans TwinCAT HMI ?",
-      "reponse" "Pour passer en vision avancée et afficher les variables internes système : cliquer sur l'icône 'C' (Configuration), puis sur 'All Symbols', puis sur l’icône '...' (trois points)."
-    },
-    {
-      "topic": "Responsive design",
-      "question": "Comment rendre un objet responsive dans TwinCAT HMI ?",
-      "reponse": "Pour rendre un objet responsive : définir HeightMode et WidthMode sur « Parent », puis exprimer Left, Right, Top et Bottom en pourcentage (%) plutôt qu'en pixels (px)."
-    }
-  ]
-
-
-
+  {
+    "question": "Quel est le site de démo utile pour voir toutes les possibilités de TwinCAT HMI TE2000 ?",
+    "reponse": "Le site de démonstration est https://cmi.beckhoff-cloud.com. Il présente de nombreux exemples d’interfaces créées avec TwinCAT HMI TE2000.",
+    "motscles": ["TE2000", "TwinCAT HMI", "demo", "exemples", "cloud", "beckhoff", "cmi", "site utile"]
+  },
+  {
+    "question": "Comment réinitialiser l’affichage si j’ai modifié/supprimé une fenêtre par erreur ?",
+    "reponse": "Menu du haut → Window → Reset Window Layout.",
+    "motscles": ["reset", "window", "layout", "réinitialiser affichage", "fenêtres", "IDE", "vue", "reset layout"]
+  },
+  {
+    "question": "Quelle règle suivre pour nommer les objets dans TE2000 ?",
+    "reponse": "Toujours nommer chaque objet selon la règle définie dans le fichier Excel présent sur le serveur de l’entreprise. S’y référer avant d’ajouter/renommer un objet.",
+    "motscles": ["naming", "nomenclature", "excel", "serveur", "règle nommage", "convention", "objet", "bonnes pratiques"]
+  },
+  {
+    "question": "Comment éviter de déplacer par erreur un objet sur une page HMI ?",
+    "reponse": "Dans le Document Outline, utiliser l’icône de cadenas pour verrouiller l’objet (lock). Ainsi, il ne bougera pas par inadvertance.",
+    "motscles": ["lock", "verrouiller", "document outline", "protéger", "déplacement", "cadenas", "editeur", "sélection"]
+  },
+  {
+    "question": "Comment ouvrir le Document Outline dans TwinCAT HMI ?",
+    "reponse": "Cliquer sur la toute première icône située au-dessus de l’icône « C » (Configuration), près de l’icône « L » (Live View).",
+    "motscles": ["document outline", "arborescence", "icônes", "live view", "configuration", "interface", "liste des objets"]
+  },
+  {
+    "question": "À quoi servent les variables internes de type SolidColor ?",
+    "reponse": "Une variable interne SolidColor permet de définir une couleur réutilisable pour plusieurs objets, afin qu’ils partagent la même référence de couleur.",
+    "motscles": ["SolidColor", "couleur", "variables internes", "palette", "style", "thème", "référence couleur"]
+  },
+  {
+    "question": "Comment afficher toutes les variables internes système ?",
+    "reponse": "Cliquer sur l’icône « C » (Configuration) → All Symbols → icône « … » (trois points) pour accéder à la vision avancée et aux variables système.",
+    "motscles": ["variables système", "all symbols", "configuration", "vision pro", "trois points", "système", "internes"]
+  },
+  {
