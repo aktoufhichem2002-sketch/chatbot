@@ -1,0 +1,37 @@
+[
+  {
+    "question": "Quel est le site de démo utile pour voir toutes les possibilités de TwinCAT HMI TE2000 ?",
+    "reponse": "Le site de démonstration est https://cmi.beckhoff-cloud.com. Il présente de nombreux exemples d’interfaces créées avec TwinCAT HMI TE2000.",
+    "motscles": ["TE2000", "TwinCAT HMI", "demo", "exemples", "cloud", "beckhoff", "cmi", "site utile"]
+  },
+  {
+    "question": "Comment réinitialiser l’affichage si j’ai modifié/supprimé une fenêtre par erreur ?",
+    "reponse": "Menu du haut → Window → Reset Window Layout.",
+    "motscles": ["reset", "window", "layout", "réinitialiser affichage", "fenêtres", "IDE", "vue", "reset layout"]
+  },
+  {
+    "question": "Quelle règle suivre pour nommer les objets dans TE2000 ?",
+    "reponse": "Toujours nommer chaque objet selon la règle définie dans le fichier Excel présent sur le serveur de l’entreprise. S’y référer avant d’ajouter/renommer un objet.",
+    "motscles": ["naming", "nomenclature", "excel", "serveur", "règle nommage", "convention", "objet", "bonnes pratiques"]
+  },
+  {
+    "question": "Comment éviter de déplacer par erreur un objet sur une page HMI ?",
+    "reponse": "Dans le Document Outline, utiliser l’icône de cadenas pour verrouiller l’objet (lock). Ainsi, il ne bougera pas par inadvertance.",
+    "motscles": ["lock", "verrouiller", "document outline", "protéger", "déplacement", "cadenas", "editeur", "sélection"]
+  },
+  {
+    "question": "Comment ouvrir le Document Outline dans TwinCAT HMI ?",
+    "reponse": "Cliquer sur la toute première icône située au-dessus de l’icône « C » (Configuration), près de l’icône « L » (Live View).",
+    "motscles": ["document outline", "arborescence", "icônes", "live view", "configuration", "interface", "liste des objets"]
+  },
+  {
+    "question": "À quoi servent les variables internes de type SolidColor ?",
+    "reponse": "Une variable interne SolidColor permet de définir une couleur réutilisable pour plusieurs objets, afin qu’ils partagent la même référence de couleur.",
+    "motscles": ["SolidColor", "couleur", "variables internes", "palette", "style", "thème", "référence couleur"]
+  },
+  {
+    "question": "Comment afficher toutes les variables internes système ?",
+    "reponse": "Cliquer sur l’icône « C » (Configuration) → All Symbols → icône « … » (trois points) pour accéder à la vision avancée et aux variables système.",
+    "motscles": ["variables système", "all symbols", "configuration", "vision pro", "trois points", "système", "internes"]
+  }
+]
