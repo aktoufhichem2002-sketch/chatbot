@@ -1,146 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- Fuse.js pour la recherche floue -->
-    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
-
     <meta charset="UTF-8">
     <title>Chatbot Web - Hichem</title>
-    <link rel="stylesheet" href="style.css">
+    style.css
 </head>
+
 <body>
 
     <div class="container">
         <h2>Chatbot Web</h2>
 
-        <div class="robot" aria-hidden="true">🤖</div>
+        <div class="robot">🤖</div>
 
         <div id="chatbox"></div>
 
         <div class="input-zone">
-            <input type="text" id="userInput" placeholder="Pose une question..." />
+            <input type="text" id="userInput" placeholder="Pose une question...">
             <button id="sendBtn">Envoyer</button>
         </div>
     </div>
 
     <footer class="footer">Hichem Aktouf</footer>
 
-    <script>
-        let fuse = null;          // index Fuse (recherche floue)
-        let connaissances = [];   // données JSON chargées
-        let basePrete = false;    // prêt à répondre ?
-
-        // 1) Charger la base et initialiser Fuse
-        async function chargerConnaissances() {
-            try {
-                const res = await fetch("base_connaissances.json", { cache: "no-cache" });
-                connaissances = await res.json();
-
-                // Options Fuse : ajuste threshold (0 = strict, 1 = permissif)
-                const options = {
-                    keys: [
-                        { name: "question", weight: 0.7 },
-                        { name: "motscles", weight: 0.3 } // si présent dans le JSON
-                    ],
-                    includeScore: true,
-                    threshold: 0.38,   // bon compromis FR (typos légères + paraphrases)
-                    ignoreLocation: true,
-                    minMatchCharLength: 2,
-                    distance: 100
-                };
-
-                fuse = new Fuse(connaissances, options);
-                basePrete = true;
-
-                // Message d'accueil quand c'est prêt
-                ajouterMessage("bot", "Salut ! Je peux comprendre des formulations proches. Essaye par ex. : « Déclarer variable TwinCAT », « c’est quoi TON ? », « boucle for Python ».");
-            } catch (e) {
-                console.error(e);
-                ajouterMessage("bot", "Impossible de charger la base de connaissances. Vérifie le fichier base_connaissances.json.");
-            }
-        }
-
-        // 2) Affichage des messages
-        function ajouterMessage(auteur, message) {
-            const chatbox = document.getElementById("chatbox");
-            const div = document.createElement("div");
-            div.className = `msg ${auteur}`;
-            div.textContent = message;
-            chatbox.appendChild(div);
-            chatbox.scrollTop = chatbox.scrollHeight;
-        }
-
-        // 3) Trouver une réponse avec recherche floue
-        function trouverReponse(questionUtilisateur) {
-            if (!basePrete || !fuse) {
-                return { type: "status", text: "Chargement des connaissances… réessaye dans une seconde." };
-            }
-
-            const q = questionUtilisateur.trim();
-            if (!q) {
-                return { type: "status", text: "Pose une question pour commencer 😊" };
-            }
-
-            const resultats = fuse.search(q);
-
-            if (resultats.length === 0) {
-                return {
-                    type: "unknown",
-                    text: "Je ne connais pas encore cette question. Essaie de reformuler ou ajoute-la dans base_connaissances.json."
-                };
-            }
-
-            // Meilleure correspondance
-            const meilleur = resultats[0];
-            const score = meilleur.score ?? 1;  // 0 = parfait, proche de 1 = éloigné
-            const confiance = 1 - score;        // on renverse pour afficher une “confiance”
-
-            // Seuils de confiance (ajuste selon ton JSON)
-            if (confiance >= 0.60) {
-                return { type: "answer", text: meilleur.item.reponse, confiance };
-            }
-
-            // Sinon : proposer des suggestions
-            const suggestions = resultats.slice(0, 3).map(r => r.item.question);
-            return {
-                type: "suggest",
-                text: "Je ne suis pas sûr d’avoir bien compris. Tu voulais dire :",
-                suggestions,
-                confiance
-            };
-        }
-
-        // 4) Envoi du message
-        function sendMessage() {
-            const input = document.getElementById("userInput");
-            const question = input.value.trim();
-            if (question === "") return;
-
-            ajouterMessage("user", question);
-            input.value = "";
-
-            const res = trouverReponse(question);
-
-            if (res.type === "answer") {
-                ajouterMessage("bot", res.text + `\n(Confiance ~ ${(res.confiance * 100).toFixed(0)}%)`);
-            } else if (res.type === "suggest") {
-                ajouterMessage("bot", res.text + "\n- " + res.suggestions.join("\n- "));
-            } else {
-                ajouterMessage("bot", res.text);
-            }
-        }
-
-        // 5) Bind UI
-        document.getElementById("sendBtn").addEventListener("click", sendMessage);
-        document.getElementById("userInput").addEventListener("keydown", (e) => {
-            if (e.key === "Enter") sendMessage();
-        });
-
-        // 6) Démarrage
-        // Message initial rapide (avant chargement)
-        ajouterMessage("bot", "Chargement de la base…");
-        chargerConnaissances();
-    </script>
-
+    script.js</script>
 </body>
 </html>
