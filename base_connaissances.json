@@ -1,5 +1,4 @@
-{
-  "knowledge": [
+[
     {
       "topic": "TE2000 - Site de démonstration",
       "question": "Quel est le site de démonstration utile pour voir toutes les possibilités de TE2000 ?",
@@ -41,5 +40,6 @@
       "reponse": "Pour rendre un objet responsive : définir HeightMode et WidthMode sur « Parent », puis exprimer Left, Right, Top et Bottom en pourcentage (%) plutôt qu'en pixels (px)."
     }
   ]
-}
+
+
 
