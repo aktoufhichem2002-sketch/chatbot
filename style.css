@@ -16,6 +16,9 @@ body {
     background-size: 600% 600%;
     animation: mauveShift 12s ease infinite;
 }
+.h2 {
+    text-align: center;
+} 
 
 /* ================================ */
 /*             CONTAINER            */
@@ -190,3 +193,4 @@ button:active {
         font-size: 72px;
     }
 }
+
