@@ -60,8 +60,25 @@
     "reponse": "Oui. Il est possible de créer une classe vide puis de définir le style via du CSS. Pour cela : créer un dossier CSS → Ajouter un nouvel élément → Cascading Style Sheet. Exemple de CSS : \n\n.tchmi-class-NomDeLaClasse { text-decoration: underline; text-decoration-thickness: 2px; }\n\nEnsuite, appliquer la classe à un contrôle via sa propriété 'Class'.",
     "motscles": ["css", "tchmi-class", "class", "style", "underline", "css folder", "theme", "design"]
   },
-
+  
+  {
+    "question": "Comment afficher seulement N chiffres après la virgule dans TwinCAT HMI ?",
+    "reponse": "Pour afficher un nombre avec un nombre précis de décimales, utiliser la fonction JavaScript : variable.toFixed(n). Exemple : maValeur.toFixed(2) pour afficher 2 chiffres après la virgule.",
+    "motscles": ["tofixed", "décimales", "virgule", "format nombre", "javascript", "affichage nombre"]
+  },
+  {
+    "question": "Comment lire ET écrire une variable PLC depuis un objet HMI ?",
+    "reponse": "Après avoir sélectionné la variable PLC liée à l’objet, faire clic droit → Edit Symbol → régler BindingMode sur « TwoWay ». Cela permet la lecture (PLC → HMI) et l’écriture (HMI → PLC).",
+    "motscles": ["twoway", "binding", "lectures", "écriture", "plc", "symbol", "bindingmode", "liaison variable"]
+  },
+  {
+    "question": "Dans un Numeric Input, comment faire pour que la valeur soit envoyée au PLC seulement quand l'utilisateur valide avec Entrée ?",
+    "reponse": "Dans les propriétés du Numeric Input, régler « Input Processing Point » sur « interactionFinished ». Ainsi, la valeur n’est envoyée qu’une fois la saisie terminée (ex : après Enter).",
+    "motscles": ["numeric input", "interactionfinished", "entrée", "validation", "saisie", "valider", "plc", "input processing"]
+  },
+  
 
 ]
+
 
 
