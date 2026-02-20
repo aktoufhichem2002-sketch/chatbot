@@ -33,5 +33,13 @@
     "question": "Comment afficher toutes les variables internes système ?",
     "reponse": "Cliquer sur l’icône « C » (Configuration) → All Symbols → icône « … » (trois points) pour accéder à la vision avancée et aux variables système.",
     "motscles": ["variables système", "all symbols", "configuration", "vision pro", "trois points", "système", "internes"]
-  }
+  },
+  {
+    "question": "Comment rendre un objet responsive dans TwinCAT HMI ?",
+    "reponse": "Régler HeightMode et WidthMode sur « Parent », puis définir Left/Right/Top/Bottom en pourcentage (%) plutôt qu’en pixels (px).",
+    "motscles": ["responsive", "height mode", "width mode", "parent", "layout", "pourcentage", "px", "ancrages"]
+  },
+  
+
 ]
+
