@@ -77,8 +77,54 @@
     "motscles": ["numeric input", "interactionfinished", "entrée", "validation", "saisie", "valider", "plc", "input processing"]
   },
   
+{
+    "question": "Quel raccourci clavier permet d'afficher la liste des variables et fonctions dans le champ de Function Binding ?",
+    "reponse": "Le raccourci est Ctrl + Tab. Il fait apparaître l'autocomplétion affichant les variables, fonctions et propriétés disponibles pour le binding.",
+    "motscles": ["ctrl tab", "function binding", "autocompletion", "binding", "liste variables", "raccourci"]
+  },
+  {
+    "question": "Pourquoi la table de vérité (visualisation) ne fonctionne qu’avec les variables PLC et pas avec les variables internes HMI ?",
+    "reponse": "La table de vérité ne supporte que les variables PLC. Les variables internes HMI ne peuvent pas être visualisées directement. Pour voir leur état, il faut les lier à des objets visuels et utiliser le Live View.",
+    "motscles": ["table verite", "visualisation", "variables internes", "live view", "plc", "visualiser variables"]
+  },
+  {
+    "question": "Qu'est-ce que le package SqliteHistorize dans TwinCAT HMI ?",
+    "reponse": "SqliteHistorize est un package qui crée une petite base de données SQLite enregistrant périodiquement les variables (toutes les x secondes ou millisecondes). Il est principalement utilisé pour l’historisation, notamment pour les courbes.",
+    "motscles": ["sqlite", "historize", "historisation", "courbes", "base de donnees", "package", "enregistrement variables"]
+  },
+  {
+    "question": "À quoi sert le champ SQLite dans l’onglet Configuration (icone C) ?",
+    "reponse": "Dans l’icône Configuration ('C'), la section SQLite permet d’ajouter les variables à historiser ou à suivre en temps réel via le moteur SQLite.",
+    "motscles": ["sqlite", "configuration", "icone c", "historisation", "variables", "temps reel"]
+  },
+  {
+    "question": "Comment fonctionne un Toggle Group dans TwinCAT HMI ?",
+    "reponse": "En sélectionnant plusieurs ToggleButtons, on peut définir leur propriété 'ToggleGroup' avec le même nom. Cela crée un groupe où l’activation d’un bouton désactive automatiquement les autres.",
+    "motscles": ["togglebutton", "togglegroup", "groupe", "boutons", "exclusif", "ui", "interaction"]
+  },
+  {
+    "question": "Quel réglage SymbolAccess utiliser lors de la création d’un groupe de gestion de login ?",
+    "reponse": "Pour les groupes de login, la propriété SymbolAccess doit toujours être réglée sur Read/Write pour permettre l'accès et la mise à jour des informations liées à l'utilisateur.",
+    "motscles": ["login", "gestion utilisateur", "symbolaccess", "read write", "securite", "authentification"]
+  },
+  {
+    "question": "À quoi sert le package TchmiRecipeManagement ?",
+    "reponse": "Le package TchmiRecipeManagement sert à créer et gérer des recettes, incluant l’enregistrement, le chargement et la modification de jeux de paramètres.",
+    "motscles": ["recipe", "recettes", "management", "tchmi", "parametres", "package", "gestion recettes"]
+  },
+  {
+    "question": "Qu'est-ce que le package HMI.PI.ProcessLibrary ?",
+    "reponse": "HMI.PI.ProcessLibrary est une bibliothèque contenant de nombreux objets et composants avancés. Si elle n’apparaît pas dans la liste des packages, il faut contacter le support Beckhoff pour savoir quel module installer depuis le site officiel.",
+    "motscles": ["processlibrary", "hmi pi", "bibliotheque", "packages", "beckhoff", "objets avances"]
+  },
+  {
+    "question": "Pourquoi vaut-il mieux utiliser les packages dans TwinCAT Package Manager plutôt que les workloads ?",
+    "reponse": "Il est recommandé d’installer uniquement les packages, car les workloads peuvent manquer de fichiers ou être incomplets, créant des problèmes lors du développement HMI.",
+    "motscles": ["package manager", "packages", "workloads", "installation", "configuration", "beckhoff"]
+  }
 
 ]
+
 
 
 
