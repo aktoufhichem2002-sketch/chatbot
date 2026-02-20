@@ -40,6 +40,28 @@
     "motscles": ["responsive", "height mode", "width mode", "parent", "layout", "pourcentage", "px", "ancrages"]
   },
   
+{
+    "question": "Comment rendre la taille du texte d’un bouton ou d’un TextBlock automatiquement proportionnelle à sa hauteur ?",
+    "reponse": "Dans les propriétés de l'objet, aller dans la section 'Text'. Dans 'FontSize', créer un DataBinding → Control → Layout (Rendered) → choisir 'RenderedHeight'. Ensuite diviser cette valeur par un facteur (généralement /2) pour obtenir la taille désirée. Exemple : Binding = RenderedHeight / 2.",
+    "motscles": ["fontsize", "text", "binding", "renderedheight", "hmi", "taille texte", "responsive", "bouton", "textblock"]
+  },
+  {
+    "question": "Quelle est la différence entre une Grid, un Container et une Region dans TwinCAT HMI ?",
+    "reponse": "Une Grid est un conteneur divisible en lignes/colonnes. Un Container est équivalent à une Grid 1x1. Une Region est un conteneur utilisé principalement pour la navigation entre les pages (Zone de chargement dynamique des pages).",
+    "motscles": ["grid", "container", "region", "navigation", "layout", "structure page", "conteneur"]
+  },
+  {
+    "question": "Comment créer un modèle de style réutilisable pour un contrôle dans TwinCAT HMI ?",
+    "reponse": "Aller dans Theme → Base → Base Theme → Control Class. Créer une nouvelle classe et définir les paramètres à appliquer aux objets. Cette classe peut ensuite être attribuée aux contrôles via la propriété 'Class'.",
+    "motscles": ["theme", "control class", "style", "base theme", "model", "parametres", "appearance", "classes"]
+  },
+  {
+    "question": "Peut-on créer un style sans définir de paramètres dans une classe ?",
+    "reponse": "Oui. Il est possible de créer une classe vide puis de définir le style via du CSS. Pour cela : créer un dossier CSS → Ajouter un nouvel élément → Cascading Style Sheet. Exemple de CSS : \n\n.tchmi-class-NomDeLaClasse { text-decoration: underline; text-decoration-thickness: 2px; }\n\nEnsuite, appliquer la classe à un contrôle via sa propriété 'Class'.",
+    "motscles": ["css", "tchmi-class", "class", "style", "underline", "css folder", "theme", "design"]
+  },
+
 
 ]
+
 
