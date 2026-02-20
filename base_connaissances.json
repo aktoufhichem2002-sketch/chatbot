@@ -57,7 +57,7 @@
   },
   {
     "question": "Peut-on créer un style sans définir de paramètres dans une classe ?",
-    "reponse": "Oui. Il est possible de créer une classe vide puis de définir le style via du CSS. Pour cela : créer un dossier CSS → Ajouter un nouvel élément → Cascading Style Sheet. Exemple de CSS : \n\n.tchmi-class-NomDeLaClasse { text-decoration: underline; text-decoration-thickness: 2px; }\n\nEnsuite, appliquer la classe à un contrôle via sa propriété 'Class'.",
+    "reponse": "Il est possible de créer une classe vide puis de définir le style via du CSS. Pour cela : créer un dossier CSS → Ajouter un nouvel élément → Cascading Style Sheet. Exemple de CSS : \n\n.tchmi-class-NomDeLaClasse { text-decoration: underline; text-decoration-thickness: 2px; }\n\nEnsuite, appliquer la classe à un contrôle via sa propriété 'Class'.",
     "motscles": ["css", "tchmi-class", "class", "style", "underline", "css folder", "theme", "design"]
   },
   
@@ -124,6 +124,7 @@
   }
 
 ]
+
 
 
 
